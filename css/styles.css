@@ -1,0 +1,21 @@
+body {
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.gradientbackground {
+    background-image: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+}
+
+.card-container {
+    :not(:last-child) {
+        margin-right: 5px;
+        margion-bottom: 5px
+    }
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
