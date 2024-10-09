@@ -2,7 +2,9 @@
 
 ## Story
 
-The following exercise should help you to try out modules and some other advanced ES6 techniques. We have a simple website, which shows cards of sorting algorithmen. The cards contain a title, small description and the execution time for sorting of 1000 elements. Think a little bit out of the box and check if there are more possibilities to improve the code.
+The following exercise should help you to try out modules and some other advanced ES6 techniques. We have a simple website, which shows cards of sorting algorithm. 
+The cards contain a title, small description, time and space complexity and the execution time for sorting of X elements. 
+Also try to improve the code by using already known javascript techniques and functions.
 
 ## Task
 - Write a function which generates a card template, fill it with data and return the complete HTML markup, so it will be rendered then to the body.
@@ -18,7 +20,7 @@ The following exercise should help you to try out modules and some other advance
     - destructuring objects
     - spread parameter
     - and more.
-## Bonus Points
+## Bonus Task
 - try to avoid `jquery` and use `vanilla javascript` instead
 
 ## Useful links
