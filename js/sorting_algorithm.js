@@ -157,3 +157,18 @@ function heapify(arr, n, i) {
     heapify(arr, n, largest);
   }
 }
+
+/**
+ * Measures the execution time of a sorting function.
+ * @param {Function} sortFunction - The sorting function to be measured.
+ * @param {number[]} arr - The array to be sorted.
+ * @returns {number} - The execution time in milliseconds.
+ */
+const measurePerformance = (sortFunction, arr) => {
+  const start = performance.now();
+  sortFunction([...arr]);
+  const end = performance.now();
+  return end - start;
+}
+
+export {bubbleSort, selectionSort, insertionSort, mergeSort, quickSort, heapSort, measurePerformance}
