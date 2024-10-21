@@ -1,11 +1,25 @@
-//TODO: Import all of the important data and modules
-//TODO: Render all of the cards from given data
-//TODO: Add a click function to each button, that will start the measurement
-// and update the cards data with the new measurement
-
+import { createCard } from "./card_generator.js"
+import { sortingAlgorithmData } from "./data.js"
+import { performanceSort } from './sorting_algorithm.js'
 const getNewSortableArray = (min, max) => Array.from({ length: max - min + 1 }, (_, i) => min + i).sort((a, b) => 0.5 - Math.random());
+const renderCards = () => {
+  const cardContainer = document.getElementById("cardContainer");
+  if (!cardContainer) return;
+  let cardsHTML = "";
+  for (let i = 0; i < sortingAlgorithmData.length; i++) {
+    cardsHTML += createCard(sortingAlgorithmData[i]);
+  }
+  cardContainer.insertAdjacentHTML('beforeend', cardsHTML);
+}
 
-$(document).ready(function(e) {
-  const sortableArray = getNewSortableArray(1, 5000)
-  console.log(sortableArray.length)
+$(document).ready(() => {
+  renderCards();
+  const sortableArray = getNewSortableArray(1, 5000);
+  document.addEventListener('click', (evt) => {
+    if (evt.target.classList.contains('btn-Measure')) {
+      const sortName = evt.target.dataset.name;
+      const card = evt.target.closest('.card');
+      card.querySelector('.timeSort').innerText = performanceSort(sortName, sortableArray);
+    }
+  });
 })

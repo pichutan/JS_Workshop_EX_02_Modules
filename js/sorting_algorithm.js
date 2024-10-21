@@ -157,3 +157,30 @@ function heapify(arr, n, i) {
     heapify(arr, n, largest);
   }
 }
+export const performanceSort = (sortName, arr) => {
+  const startTime = performance.now();
+
+  switch (sortName) {
+    case "Bubble Sort":
+      bubbleSort(arr);
+      break;
+    case "Selection Sort":
+      selectionSort(arr);
+      break;
+    case "Insertion Sort":
+      insertionSort(arr);
+      break;
+    case "Merge Sort":
+      mergeSort(arr);
+      break;
+    case "Quick Sort":
+      quickSort(arr);
+      break;
+    default:
+      heapSort(arr);
+      break;
+  }
+
+  const endTime = performance.now();
+  return Math.round(endTime - startTime);
+};
