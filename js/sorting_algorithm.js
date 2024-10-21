@@ -1,4 +1,4 @@
-function bubbleSort(arr) {
+export function bubbleSort(arr) {
   let n = arr.length;
   let swapped;
   do {
@@ -17,7 +17,7 @@ function bubbleSort(arr) {
   return arr;
 }
 
-function selectionSort(arr) {
+export function selectionSort(arr) {
   let n = arr.length;
 
   for (let i = 0; i < n - 1; i++) {
@@ -40,7 +40,7 @@ function selectionSort(arr) {
   return arr;
 }
 
-function insertionSort(arr) {
+export function insertionSort(arr) {
   let n = arr.length;
 
   for (let i = 1; i < n; i++) {
@@ -58,7 +58,7 @@ function insertionSort(arr) {
   return arr;
 }
 
-function mergeSort(arr) {
+export function mergeSort(arr) {
   if (arr.length <= 1) {
     return arr;
   }
@@ -88,7 +88,7 @@ function merge(left, right) {
   return result.concat(left.slice(leftIndex)).concat(right.slice(rightIndex));
 }
 
-function quickSort(arr) {
+export function quickSort(arr) {
   if (arr.length <= 1) {
     return arr;
   }
@@ -110,7 +110,7 @@ function quickSort(arr) {
   return quickSort(left).concat(pivot, quickSort(right));
 }
 
-function heapSort(arr) {
+export function heapSort(arr) {
   let n = arr.length;
 
   // Build a max-heap
