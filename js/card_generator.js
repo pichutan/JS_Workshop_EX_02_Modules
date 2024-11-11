@@ -15,7 +15,7 @@ export const createCard = ({ title, description, time_complexity, space_complexi
                 <li class="list-group-item">Time: <span class="timeSort"></span></li>
             </ul>
             <div class="card-body d-grid gap-2">
-                <a href="#" class="btn btn-primary btn-Measure" data-name = "${title}">Measure</a>
+                <a href="#" class="btn btn-primary btn-Measure" data-sort-name="${title}">Measure</a>
             </div>
     </div>
   `;

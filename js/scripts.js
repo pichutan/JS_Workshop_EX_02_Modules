@@ -12,12 +12,12 @@ const renderCards = () => {
   cardContainer.insertAdjacentHTML('beforeend', cardsHTML);
 }
 
-$(document).ready(() => {
+document.addEventListener('DOMContentLoaded', () => {
   renderCards();
   const sortableArray = getNewSortableArray(1, 5000);
   document.addEventListener('click', (evt) => {
     if (evt.target.classList.contains('btn-Measure')) {
-      const sortName = evt.target.dataset.name;
+      const sortName = evt.target.dataset.sortName;
       const card = evt.target.closest('.card');
       card.querySelector('.timeSort').innerText = performanceSort(sortName, sortableArray);
     }
